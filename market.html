@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="style/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="style/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="style/magnific-popup.css" rel="stylesheet"> 
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="lib/jquery.magnific-popup.min.js?v=0.9.9"></script>
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+
+<style type="text/css">
+	    /* padding-bottom and top for image */
+	    .mfp-no-margins img.mfp-img {
+	      padding: 0;
+	    }
+	    /* position of shadow behind the image */
+	    .mfp-no-margins .mfp-figure:after {
+	      top: 0;
+	      bottom: 0;
+	    }
+	    /* padding for main container */
+	    .mfp-no-margins .mfp-container {
+	      padding: 0;
+	    }
+	    
+      #tooltip {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        padding: 10px;
+        background-color: white;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+      }
+
+      #tooltip.hidden {
+        display: none;
+      }
+
+      #tooltip p {
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+</style>
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" accesskey="1" id="homepage">Homepage</a></li>
+				<li><a href="index.html#aboutme" accesskey="2" id="aboutmeBtn">About Me</a></li>
+				<li class="current_page_item"><a href="index.html#samplework" accesskey="3" id="sampleworkBtn">Sample Work</a></li>
+				<li><a href="index.html#getintouch" accesskey="4" title="getintouchBtn">Get in Touch</a></li>
+			</ul>
+		</div>
+</div>
+
+<div id="wrapper3">
+	<div id="portfolio" class="container">
+			
+			
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<H3>Market basket analysis in retail</H3>
+<p> Today, leading companies are applying advanced predictive modeling to their vast and growing amounts of data to improve business performance via faster, better decision making. Using predictive analytics for customer analytics and marketing analytics allows organizations to discover valuable insights and intelligence from their data—in doing so they uncover new opportunities to increase sales and profitability.
+
+<p>In retail, marketing, banking and medical services, affinity analysis and association rule learning have become an important aspect in making the right decisions and conclusions. These analysis embraces a broad set of analytics techniques aimed at uncovering the associations and connections between specific objects, e.g., visitors of a website, products in a store, content items of media site, etc. One of these techniques, i.e.,  market basket analysis, checks whether there are combinations of products that frequently co-occur in transactions. For example, people that buy flour and casting sugar, also tend to buy eggs (because a high proportion of them are planning on baking a cake).
+
+<p>
+<center><img width="38%" src="img/basket.jpg" /></center>
+
+<p>For retailers , these insights are important for several reasons:
+
+    <li><b>Optimize store layout:</b> <br> Put products that co-occur together close to one another, to improve the customer shopping experience and gain gain profit.
+    <li><b>Improve promotion offers:</b> <br> Target customers who buy flour with offers on eggs, to encourage them to spend more on their shopping basket.
+    <li>...
+
+<p><br>
+<p>
+
+<h3>The Process</h3>
+
+<li><b>Methodology:</b> <br>To apply and understand the methodology around market basket analysis (MBA), some knowledge of mathematics, probability theory and statistics needs to be present.
+    
+<p><br>Let I denote the set of items, which are objects that we are identifying associations between. In retail, these items can be seen as products in the shop, e.g., eggs correspond to the first item (i1), fruit to the second item (i2), etc. Every retailer (e.g., Delhaize, Colruyt, etc.) therefore encompassess a set of products (items) in their shop, which can mathematically be denoted by
+
+<div lang="latex" align="center">
+    I = \{i_{1}, i_{2}, \dots, i_{m}\}, \qquad \mbox{where } m = \mbox{Number of items}.
+</div>
+
+<p>Furthermore, we define Tn as the set of items co-occuring together in transaction n. For a retailer, a transaction is, generally, a transaction. For a publisher, a transaction might be the group of articles read in a single visit to the website (it is up to the analyst to define over what period to measure a transaction). Mathematically, we can write Tn as
+
+<div lang="latex" align="center">
+    T_{n} = \{i_{i}, i_{j}, \dots, i_{k}\}, \qquad \mbox{where } (i, j, k) \in \{1, \dots, m\}^{3} \mbox{ and } n = \mbox{Number of transaction}.
+</div>
+
+<p>
+<center><img width="60%" src="img/databasket.png" /></center>
+
+<p>Given these information in a dataset, MBA returns a set of association rules in the form of
+
+<div lang="latex" align="center">
+    \{i_{i}, i_{j}, \dots\} \Rightarrow \{i_{k}\}, \qquad \mbox{where } (i, j, k) \in \{1, \dots, m\}^{3},
+</div>
+
+<p>i.e., if you have the items in item set (on the left hand side (LHS) of the rule i.e. {i_1, i_2,...}), then it is likely that a visitor will be interested in the item on the right hand side (RHS i.e., {i_k}). In case of our example above, the rule results in
+
+<div lang="latex" align="center">
+    \{\mbox{flour}, \mbox{sugar}\} \Rightarrow \{\mbox{eggs}\}.
+</div>
+
+<p>MBA analysis often produces very large numbers of rules, especially when many items are involved.There is no single-best way to decide which rules are the “interesting” rules. Many approaches have been suggested and investigated, including some of the most widely reported MBA metrics. In what follows, we will discuss 4 popular measurements.
+
+<p>To explain these measurements more in detail, lets consider the rule X => Y.
+
+    <li><b>Support:</b> <br> The joint probability that both items are in a basket. It answers the question what percent of baskets contain X and Y?
+    <li><b>Confidence:</b> <br> The conditional probability that Y is in the basket given that X is present.
+    <li><b>Expecte confidence:</b> <br> The probability that Y is in a basket.
+    <li><b>Lift:</b> <br> The confidence divided by the expected confidence. It’s the ratio of the likelihood of Y being in a basket with X to the likelihood of Y being in any basket.
+    
+<p>
+<center><img width="35%" src="img/rule.png" /></center>
+
+<p>For simplicity, we clarify these measurements by an example. Suppose MBA outputs the rule {ice cream} => {coca cola} with a support of 21.98% and a confidence of 70.29%. Generally, it means that in 21.98% of the cases ice cream and coca cola products are sold together, and in 70.29% of the case when someone purchases an ice cream product, a coca cola product is also purchased.
+
+<p>
+<center><img width="70%" src="img/sasout.png" /></center>
+
+<p>But which are the best rules? Traditionally, support and confidence have been used to identify important rules, but “the most popular objective measure of interestingness is lift”. When lift is greater than 1, X is said to “lift” the presence of Y above what we would expect to see. But can we be sure that the rules, even the rules with lift > 1, are statistically significant? One experimental study showed even with minimum support and confidence constraints in place, up to 30% of the generated rules were statistically insignificant (Dorn et al., 2008). Adding a significance test for each rule would provide an additional criterion for judging rule importance. A test can also be used to prune rules with lift > 1 by setting aside those that are not statistically significant.
+
+<p>For these reasons, a chi-square test for independence can be used. It evaluates the null hypothesis that the presence or absence of Y is not related to the presence or absence of X. The test is based upon a 2 x 2 contingency table comprised of the cross-tab frequencies of X and Y, where the test statistic is formulated as
+
+<div lang="latex" align="center">
+    \chi = n \cdot (lift -1)^{2} \cdot \frac{support \cdot confidence}{(confidence - support) \cdot (lift - confidence)}.
+</div>
+
+<p>Note that chi-square results are unreliable when cell counts are less than 5. Setting an appropriate minimum support can help mitigate this occurrence.
+
+<p>Going back to our example, we for example see that rules 113 and 114 have lift > 1, but are not statistically significant at alpha = .05.
+
+<p>
+<center><img width="70%" src="img/sasout1.png" /></center>
+
+</li>
+<p>
+<li><b>Applying MBA in practice:</b> <br> In the past, i have conducted these analysis for a Belgium food company, in order to assist marketeers and retailers in making the right choices. The main goal of this project was to check whether improvement could still be made with the use of advanced analytics. After applying MBA and making recommendations to the personnel of the company, a profit of 7% was gained after 5 months. Analysis were performed with SAS, where a SAS macro was used to obtain the results.
+    </div>
+</div>
+</div>
+
+<div id="contact">
+	<div class="title">
+		<h2><A NAME="getintouch">Contact details</A></h2>
+        <span class="byline">Ways to get in touch:</span> </div>
+	<ul class="contact">
+		<li><a href="https://nl-nl.facebook.com/martial.luyts" class="icon icon-facebook"><span></span></a></li>
+		<li><a href="https://be.linkedin.com/in/martialluyts" class="icon icon-linkedin"><span>LinkedIn</span></a></li>
+		<li><a href="https://github.com/MLdatascienc" class="icon icon-github"><span>Github</span></a></li>
+		<li><a href="mailto:martial.luyts@kuleuven.be" class="icon icon-envelope"><span>Mail</span></a></li>
+	</ul>
+	<p>Template design by Andrew Yuan - Used under <a href="https://creativecommons.org/licenses/by/3.0/" rel="nofollow">CC BY 3.0</a>. Modified by Martial Luyts. </p>
+</div>
+
+</html>

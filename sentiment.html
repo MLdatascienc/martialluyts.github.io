@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="style/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="style/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="style/magnific-popup.css" rel="stylesheet"> 
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="lib/jquery.magnific-popup.min.js?v=0.9.9"></script>
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+<style type="text/css">
+	    /* padding-bottom and top for image */
+	    .mfp-no-margins img.mfp-img {
+	      padding: 0;
+	    }
+	    /* position of shadow behind the image */
+	    .mfp-no-margins .mfp-figure:after {
+	      top: 0;
+	      bottom: 0;
+	    }
+	    /* padding for main container */
+	    .mfp-no-margins .mfp-container {
+	      padding: 0;
+	    }
+	    
+      #tooltip {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        padding: 10px;
+        background-color: white;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+      }
+
+      #tooltip.hidden {
+        display: none;
+      }
+
+      #tooltip p {
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+</style>
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" accesskey="1" id="homepage">Homepage</a></li>
+				<li><a href="index.html#aboutme" accesskey="2" id="aboutmeBtn">About Me</a></li>
+				<li class="current_page_item"><a href="index.html#samplework" accesskey="3" id="sampleworkBtn">Sample Work</a></li>
+				<li><a href="index.html#getintouch" accesskey="4" title="getintouchBtn">Get in Touch</a></li>
+			</ul>
+		</div>
+</div>
+
+<div id="wrapper3">
+	<div id="portfolio" class="container">
+			
+			
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<H3>Sentiment analysis on Rock Werchter 2015, based on twitter tweets</H3>
+<p>Big data is a hot topic nowadays. Companies all over the world begin to gain interest in big data and advance analytics. It can bring an added value to predict new aspects, gain insight in customer behaviour and reveal hidden patterns that nobody had ever seen before.
+
+<p>In this post, a specific aspect of advanced analytics is brought forward, i.e., sentiment analysis, and applied to analyse twitter tweets of Rock Werchter, one of the largest festivals of Belgium. Purpose of this analysis was to investigate the succes rate of the festival on twitter, among all days and stages. Particularly, interest is given on the top 10 bands with the highest average 'positive' and 'negative' sentiment score.
+
+<p>
+<center><img src="img/twitter.png" /><br>Examples of tweets that contain #RW15</center>
+
+<p><br>
+<p>
+
+<h3>The Process</h3>
+
+<li><b>Data Extraction:</b> <br>The data that was used to analyse Rock Werchter 2015 was scraped from twitter, where every tweet needed to contain #RW15. This was done by an R script, which uses an API from twitter that enables the user to collect tweets from twitter. A total of 12000 tweets were scraped from twitter, and cleaned for data quality purpose. As result, 9565 tweets were used that contains information about date of tweet, text, count of retweets, etc.
+  </li>
+<p>
+<li><b>Data analysis and design:</b> <br>
+    <p>
+    <center><img src="img/wikipedia.png" /><br>Description of sentiment analysis (ref.: Wikipedia)</center>
+    <br>To gain insight in our collected data, descriptive statistics were performed. Tweets were collected between 23 June 2015 (10:23:25) till 29 July 2015 (20:54:02). A mean of 2252 tweets were scraped per day, with a maximum of 3185 tweets on 24 June 2015 (start of Rock Werchter). Overall, 43% of the tweets were posted by females, and 57% by males. Since Rock Werchter 2015 had a broad line up, descriptive statistics were performed per group. As result, a mean of 85 tweets were collected per group. Every group had a minimum of 34 tweets. For the analysis part, sentiment analysis was performed based on different dictionaries. A total of 15000 positive words and 11436 negative words (in Dutch and English) were collected and screened for sentiment value. These values were then used to perform sentiment analysis on our collected data.
+    <p>
+    <li><b>Outcome and results:</b> <br>
+        <p>
+        <center><img src="img/sent.png" /><br>Sentiment analysis of RW15 in Tableau</center>
+        <br>As result, bands like Fufanu and Kid Ink scored high on twitter. Around 75% of the tweets were analyzed as positive, and saturday was considered as best festival day on twitter. At last, we observe that bands with the highest sentiment score were playing on saturday and sunday, while the bands with the lowest ones were allocated on thursday and friday. Possible reason for this pattern is the drop out of Foo Fighters on thursday, because of Dave Grohl's leg injury.
+        <p>
+        <li><b>Remark:</b> <br>Scripts for twitter scraping and sentiment analysis were made in R, while visualizations were performed in Tableau.
+		</div>
+	</div>
+</div>
+
+<div id="contact">
+	<div class="title">
+		<h2><A NAME="getintouch">Contact details</A></h2>
+        <span class="byline">Ways to get in touch:</span> </div>
+	<ul class="contact">
+		<li><a href="https://nl-nl.facebook.com/martial.luyts" class="icon icon-facebook"><span></span></a></li>
+		<li><a href="https://be.linkedin.com/in/martialluyts" class="icon icon-linkedin"><span>LinkedIn</span></a></li>
+		<li><a href="https://github.com/MLdatascienc" class="icon icon-github"><span>Github</span></a></li>
+		<li><a href="mailto:martial.luyts@kuleuven.be" class="icon icon-envelope"><span>Mail</span></a></li>
+	</ul>
+	<p>Template design by Andrew Yuan - Used under <a href="https://creativecommons.org/licenses/by/3.0/" rel="nofollow">CC BY 3.0</a>. Modified by Martial Luyts. </p>
+</div>
+</body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50045474-1', 'andrewyuan.github.io');
+  ga('send', 'pageview');
+
+</script>
+
+</html>
